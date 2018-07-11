@@ -54,7 +54,6 @@ readinst
 printf "\e[1;93m[*] Press Ctrl + C to stop attack \e[0m \n"
 attacktor
 else
-printf "\e[1;93m[*] Press Ctrl + C to stop attack \e[0m \n"
 attack
 fi
 }
@@ -89,7 +88,8 @@ done
 
 attack() {
 default_inst="4"
-read -p "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Terminals \e[0m\e[1;77m(Default 4): \e[0m" inst
+read -p $'\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Terminals \e[0m\e[1;77m(Default 4): \e[0m' inst
+printf "\e[1;93m[*] Press Ctrl + C to stop attack \e[0m \n"
 i=1
 while true; do
   let i=1
