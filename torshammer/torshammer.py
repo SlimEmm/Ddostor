@@ -158,7 +158,7 @@ def main(argv):
 
     print "/*"
     print " * Target: %s Port: %d" % (target, port)
-    print " * Threads: %d " (threads)
+    print " * Threads: %d " % (threads)
     print " * Give 20 seconds without tor or 40 with before checking site"
     print " */"
 
